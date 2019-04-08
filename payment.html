@@ -1,0 +1,119 @@
+<html>
+    <head>
+	<script>
+	function paycheck()
+	{	
+	if(document.getElementById("mo").checked)
+	{
+	document.getElementById("de").disabled=true;
+	document.getElementById("nde").disabled=true;
+	document.getElementById("cde").disabled=true;
+	document.getElementById("cre").disabled=false;
+	document.getElementById("ncre").disabled=false;
+	document.getElementById("ccre").disabled=false;
+	document.getElementById("pmo").disabled=true;
+	document.getElementById("ppwd").disabled=true;
+	
+	}
+	if(document.getElementById("mo1").checked)
+	{
+		document.getElementById("cre").disabled=true;
+		document.getElementById("ncre").disabled=true;
+		document.getElementById("ccre").disabled=true;
+		document.getElementById("de").disabled=false;
+		document.getElementById("nde").disabled=false;
+		document.getElementById("cde").disabled=false;
+		document.getElementById("pmo").disabled=true;
+		document.getElementById("ppwd").disabled=true;
+		
+	}
+	if(document.getElementById("mo2").checked)
+	{
+		document.getElementById("pmo").disabled=false;
+		document.getElementById("ppwd").disabled=false;
+		document.getElementById("cre").disabled=true;
+		document.getElementById("ncre").disabled=true;
+		document.getElementById("ccre").disabled=true;
+		document.getElementById("de").disabled=true;
+		document.getElementById("nde").disabled=true;
+		document.getElementById("cde").disabled=true;		
+	
+	}
+
+	}
+	function check()
+	{
+	var d = document.getElementById("de");
+	var n = document.getElementById("nde");
+	var c = document.getElementById("cde");
+	var cr = document.getElementById("cre");
+	var nc = document.getElementById("ncre");
+	var cc = document.getElementById("ccre");
+	var pm = document.getElementById("pmo");
+	var ppw = document.getElementById("ppwd");
+		if(document.getElementById("mo").checked)
+		{
+				if(cr.value==""|| nc.value==""|| cc.value=="")
+				{
+				alert("Entity not filled");
+				return false;
+				}
+				else
+				{
+				alert("Payment Successful");
+				return false;
+				}
+		}
+if(document.getElementById("mo1").checked)
+		{
+				if(d.value==""|| n.value==""|| c.value=="")
+				{
+				alert("Entity not filled");
+				return false;
+				}
+				else
+				{
+				alert("Payment Successful");
+				return false;
+				}
+		}
+if(document.getElementById("mo2").checked)
+		{
+				if(pm.value==""|| ppw.value=="")
+				{
+				alert("Entity not filled");
+				return false;
+				}
+				else
+				{
+				alert("Payment Successful");
+				return false;
+				}
+		}
+
+	}
+	</script>
+        <title>
+            payment
+        </title>
+    </head>
+    <body><br><br><br><br>
+        <div><fieldset>
+                <h2 style="text-align:center;font-family: 'Times New Roman', Times, serif;color: blue; padding:"2%" align:"center" ">Payment Gateway</h2>
+                <center>
+                <form align="center" onsubmit="return check();">
+					Credit Card:<input type="radio" name="mode" id="mo" onclick="paycheck()";><br><br> 
+					Enter Credit Card Number:<input type="text" id="cre" name="cred" placeholder="Enter Card Number"><br><br>
+					Card-Holder:<input type="text" name="ncred" id="ncre" placeholder="Name as Printed on Card">&nbsp; CVV:<input type="password" name="ccred" id="ccre" placeholder="Enter CVV"> <br><br>
+					Debit Card:<input type="radio" name="mode" id="mo1" onclick="paycheck();"><br><br>
+					Enter Debit Card Number:<input type="text" id="de" name="deb" placeholder="Enter Card Number"><br><br>
+					Card-Holder:<input type="text" name="ndeb" id="nde" placeholder="Name as Printed on Card">&nbsp; CVV:<input type="password" name="cdeb" id="cde" placeholder="Enter CVV"> <br><br>
+					PayTM:<input type="radio" name="mode" id="mo2" onclick="paycheck();"><br><br>
+					Enter Mobile-No: &nbsp;<input type="text" maxlength="10" id="pmo" placeholder="Mobile Number"><br><br>
+					Enter PayTM Password: &nbsp; <input type="password" id="ppwd" placeholder="Password"><br><br><br><br>
+					<input type="submit" value="Pay">
+				</form>
+                </center>
+        </fieldset></div>
+    </body>
+</html>

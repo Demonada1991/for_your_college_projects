@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Insurance Application form</title>
+    <link rel='stylesheet' href='form-validation.css' type='text/css' />
+    <script src="valid.js"></script>
+</head>
+
+<body style="background-image:url(appimg.jpg); background-repeat:no-repeat; background-size:100%" onload="document.registration.Insurance_id.focus();">
+
+<h1>You're JUST One Click Away...</h1>
+<form name='registration' onSubmit="return formValidation();" action="payment.html" ><center>
+<ul>
+  <li><label for="Insurance_id">Insurance id</label><li>
+  <li><input type="text" name="Insurance_id" placeholder="Enter your id" size="12"><li>
+  <li><label for="passid">Password</label><li>
+  <li><input type="password" name="passid" placeholder="Enter your Password" size="12"><li>
+  <li><label for="licensekey">License Key</label><li>
+  <li><input type="text" name="licensekey" placeholder="Enter your License Key"><li>
+  <li><label for="year">Duration:</label></li> 
+  <li><select name="year">
+    <option value="1">1 Year</option>
+    <option value="2">2 Years</option>
+    <option value="3">3 Years</option>
+    <option value="4">4 Years</option>
+    <option value="5">5 Years</option>
+    </select>
+  </li>
+  <li><label for="Insurance">Insurance:</label></li> 
+  <select name="Insurance">
+    <option value="Car">Car</option>
+    <option value="2-Wheeler">2 Wheeler</option>
+  </select>
+  </li>
+  <li><input type="submit" name="submit" value="Proceed to Pay"></li>
+ </ul> 
+</form>
+</body>
+</html>

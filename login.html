@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script type="text/javascript" src="captcha.js"></script>
+        <link rel="stylesheet" href="captcha.css">
+		
+    </head>
+    <body onload="captgenerate();" bgcolor="#B0C4DE">
+		<div><center>      
+			<form name = "log"  onsubmit="return validatecaptcha()" style="padding-top:100px" action="policy.html" target="frame2">
+				<b>User_ID:</b><input type = "text" name = "uid" placeholder = "Enter User_ID" id = "ud" focus><br><br>
+				<b>Password:</b><input type="password" name="pwd" placeholder="Enter password" id="pd"><br><br>
+				Captcha:<input type="text" id="captcha" readonly="readonly" name="c" /><br><br>
+				<label for="capt" >Please enter above characters correctly:</label>
+				<input type="text" maxlength="4" id="capt" required /><br><br>
+				<!--<input type ="submit" value = "check" name='check'required> <br><br>-->
+				<input type="submit" value = "Login">
+			</form>
+			
+		</div></center>
+		<br><br><br><br><br><br><br>
+		<table align="center" bgcolor="White">
+			<tr><td height="200"><center>To Advertise Contact Us at-advertiser@mail.com</td></tr>
+		</table>
+    </body>
+</html>

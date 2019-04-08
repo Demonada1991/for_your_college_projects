@@ -1,0 +1,104 @@
+*
+{
+	margin:0;
+	padding:0;
+};
+.row
+{
+	max-width:1140px;
+	margin:0 auto;
+};
+body
+{
+	font-family:Palatino Linotype;
+};
+.hero
+{
+	position: absolute;
+	width:1140px;
+	top:50%;
+	left:45%;
+	transform: translate(-50%,-50%);
+};
+header
+{
+	background-image:url("C:\Users\Aymen\Desktop\wdl project\backg.jpg");
+	height:100vh;
+	background-position: center;
+	background-size:cover;	
+	opacity: 0.7;
+};
+h1
+{
+	color:purple;
+	font-size: 50px;
+
+}
+ul
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+}
+ul li
+{
+	float: left;
+
+}
+li a
+{
+	display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.main-nav li a:hover
+{
+	color:blue;
+	border-bottom:2px solid green;
+	transition:all 0.5s ease-in;
+	padding:15px 0;
+
+};
+.logo img
+{
+	height:10px;
+	float:center;
+	margin-top:10px;
+};
+.button1
+{
+	border:1px brown;
+        padding:10px 10px;
+	color: black;
+	border-radius:12px;
+	margin-right:20px;
+	background-color: orange;
+
+};
+.button2
+{
+	border:1px orange;
+        padding:10px 10px;
+	color: black;
+	border-radius:12px;
+	background-color:brown;
+	
+};
+.button
+{
+	margin-top:10px;
+	
+};
+1
+{
+	display:inline-block;
+	color:black;
+	text-align:center;
+	padding:18px 22px;
+	text-decoration:none;
+};
+	

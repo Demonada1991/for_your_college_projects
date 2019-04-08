@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+			Registration
+		</title>
+		<script language="javascript">
+			function form_validate()
+			{
+				var fname=document.getElementById("first");
+				var lname=document.getElementById('last');
+				var eid=document.getElementById('e_id');
+                var mob = document.getElementById('mobno');
+                var bday = document.getElementById('dob');
+				if(fname.value=="")
+                {
+					alert("First Name Not Filled");
+					fname.focus();
+					return false;
+				}
+				if(lname.value=="")
+                {
+					alert("Last Name Not Filled");
+					lname.focus();
+					return false;
+				}
+				/*if(eid.value.indexOf('@')==0 || eid.value.indexOf('.')==0)
+                {
+					alert("@ or . cannot be at starting position");
+					eid.focus();
+                }*/
+                
+				if(mob.value.length!="10" || mob.value=="")
+                {
+					alert("Invalid Mobile Number");
+					mob.focus();
+					return false;
+                }
+			}
+		</script>
+	</head>
+	<body background="C:\Users\Aymen\Desktop\wdl project\ima.jpg">
+		<h1><center><marquee><font color="000A0">REGISTER NOW</font></marquee></center></h1>
+		<br>
+		<form name="Registration" method="post" action="login.html" onsubmit="return form_validate();">
+			<font color="Black"><center>
+			<table cellspacing="5" cellpadding="5">
+                <tr><td><b>First Name</b> : </td><td><input type="text" name="fn" placeholder="First Name" id="first" size="16"></td></tr>
+                <tr><td><b>Last Name</b>  :</td> <td><input type="text" name="ln" placeholder="Last Name"  id="last" size="16"></td></tr>
+                <tr><td><b>D.O.B</b>:</td><td> <input type="date" name="dob" id="dob"></td></tr>
+                <tr><td><b>License Key</b>:</td><td><input type="text" name-"lkey" id="lkey" placeholder="License Key" size="16"></td></tr>
+			    <tr><td><b>Email</b>:</td><td><input type="email" name="eid" placeholder="Enter Your Valid Email"  id="e_id" size="16"></td></tr>
+			    <tr><td><b>Mobile No</b>:</td><td><input type="text" name="mob1" placeholder="Enter Your 10 digit mobile number" maxlength="10"  id="mobno" size="16"></td></tr>
+			    <tr><td><b>Address</b>:</td><td><textarea rows="4" cols="17" placeholder="Enter Your Address" ></textarea></td></tr>
+			    <tr><td><b>Gender</b>:</td><td>Male:<input type="radio" name="gender">	Female: <input type="radio" name="gender"></td></tr>
+			    <tr><td><b>Password</b>:</td><td><input type="password" name="pswd" id="pass" placeholder="Enter Password" size="16"></td></tr>
+            </table>
+           		<input type="submit" value="Submit" onsubmit="form_validate()">
+			</center></font>
+		</form>
+	</body>
+</html>
